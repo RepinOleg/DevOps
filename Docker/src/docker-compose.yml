@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+  server:
+    build: ./05
+  nginx:
+    build: ./06
+    ports:
+      - 80:8080
