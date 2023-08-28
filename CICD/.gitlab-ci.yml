@@ -1,0 +1,58 @@
+stages:
+  - build
+  - style
+  - test
+  - deploy
+  - result
+build-job:
+  stage: build
+  tags:
+    - build
+  script:
+    - cd src/cat/
+    - make
+    - cd ../grep/
+    - make
+  artifacts:
+    paths:
+      - src/cat/s21_cat
+      - src/grep/s21_grep
+    expire_in: 30 days
+style-job:
+  stage: style
+  tags:
+    - test
+  script:
+    - cd src/
+    - bash check_result.sh
+test-job:
+  stage: test
+  tags:
+    - test
+  script:
+    - cd src/
+    - sudo bash tests.sh
+  after_script:
+    - cd src/
+    - chmod +x ci-notify.sh
+    - bash ci-notify.sh "CI success ✅"
+deploy-job:
+  stage: deploy
+  tags:
+    - deploy
+  when: manual
+  script:
+    - cd src/
+    - sudo bash deploy.sh
+  after_script:
+    - cd src/
+    - bash ci-notify.sh "CD success ✅"
+deploy_result:
+  stage: result
+  tags:
+    - deploy
+  script:
+    - cd src/
+    - bash bash ci-notify.sh "CI/CD FAIL ❌"
+  when: on_failure
+
