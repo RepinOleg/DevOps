@@ -5,102 +5,102 @@
 * **Запустить докер образ через docker run -d [image_id|repository]**
 * **Проверить, что образ запустился через docker ps**
 
-    ![](/src/Images/1.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.1.png)
 
 * **Посмотреть информацию о контейнере через docker inspect [container_id|container_name]**
 
-    ![](/src/Images/1.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.2.png)
 
 * **По выводу команды определить и поместить в отчёт размер контейнера, список замапленных портов и ip контейнера**
 
     *IP и Ports*
 
-    ![](/src/Images/1.3.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.3.2.png)
 
     *Размер контейнера SizeRootFs*
 
-    ![](/src/Images/1.3.3.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.3.3.png)
 
 * **Остановить докер образ через docker stop [container_id|container_name]**
 
-    ![](/src/Images/1.4.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.4.png)
 
 * **Проверить, что образ остановился через docker ps**
 
-    ![](/src/Images/1.5.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.5.png)
 
 * **Запустить докер с портами 80 и 443 в контейнере, замапленными на такие же порты на локальной машине, через команду run**
 
-    ![](/src/Images/1.6.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.6.png)
 
 * **Проверить, что в браузере по адресу localhost:80 доступна стартовая страница nginx**
 
-    ![](/src/Images/1.7.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.7.png)
 
 * **Перезапустить докер контейнер через docker restart [container_id|container_name]**
 
-    ![](/src/Images/1.8.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.8.png)
 
 * **Проверить любым способом, что контейнер запустился**
 
-    ![](/src/Images/1.9.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/1.9.png)
 
 ## Part 2. Операции с контейнером
 
 * **Прочитать конфигурационный файл nginx.conf внутри докер контейнера через команду exec**
 
-    ![](/src/Images/2.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.1.png)
 
 * **Создать на локальной машине файл nginx.conf**
 * **Настроить в нем по пути /status отдачу страницы статуса сервера nginx**
 
-    ![](/src/Images/2.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.2.png)
 
 
 * **Скопировать созданный файл nginx.conf внутрь докер образа через команду docker cp**
 * **Перезапустить nginx внутри докер образа через команду exec**
 
-    ![](/src/Images/2.3.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.3.png)
 
 * **Проверить, что по адресу localhost:80/status отдается страничка со статусом сервера nginx**
 
-    ![](/src/Images/2.4.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.4.png)
 
 * **Экспортировать контейнер в файл container.tar через команду export**
 
-    ![](/src/Images/2.4.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.4.1.png)
 
 * **Остановить контейнер**
 
-    ![](/src/Images/2.5.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.5.png)
 
 * **Удалить образ через docker rmi [image_id|repository], не удаляя перед этим контейнеры**
 
-    ![](/src/Images/2.6.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.6.png)
 
 * **Удалить остановленный контейнер**
 
-    ![](/src/Images/2.7.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.7.png)
 
 * **Импортировать контейнер обратно через команду import**
 
-    ![](/src/Images/2.8.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.8.png)
 
 * **Запустить импортированный контейнер**
 
-    ![](/src/Images/2.8.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.8.1.png)
 
-    ![](/src/Images/2.8.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.8.2.png)
 
 * **Проверить, что по адресу localhost:80/status отдается страничка со статусом сервера nginx**
 
-    ![](/src/Images/2.9.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/2.9.png)
 
 ## Part 3. Мини веб-сервер
 
 * **Написать мини сервер на C и FastCgi, который будет возвращать простейшую страничку с надписью Hello World!**
 
-    ![](/src/Images/3.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/3.1.png)
 
 * **Запустить написанный мини сервер через spawn-fcgi на порту 8080**
 
@@ -110,11 +110,11 @@
 
 * **Написать свой nginx.conf, который будет проксировать все запросы с 81 порта на 127.0.0.1:8080**
 
-    ![](/src/Images/3.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/3.2.png)
 
 * **Проверить, что в браузере по localhost:81 отдается написанная вами страничка**
 
-    ![](/src/Images/3.3.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/3.3.png)
 
 * **Положить файл nginx.conf по пути ./nginx/nginx.conf (это понадобится позже)**
 
@@ -134,33 +134,33 @@
 
 4) запускает nginx.
 
-    ![](/src/Images/4.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/4.1.png)
 
 * **Собрать написанный докер образ через docker build при этом указав имя и тег**
 
-    ![](/src/Images/4.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/4.2.png)
 
 * **Проверить через docker images, что все собралось корректно**
 
-    ![](/src/Images/4.3.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/4.3.png)
 
 * **Запустить собранный докер образ с маппингом 81 порта на 80 на локальной машине и маппингом папки ./nginx внутрь контейнера по адресу, где лежат конфигурационные файлы nginx'а (см. Часть 2)**
 
-    ![](/src/Images/4.4.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/4.4.png)
 
 * **Проверить, что по localhost:80 доступна страничка написанного мини сервера**
 
-    ![](/src/Images/4.4.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/4.4.1.png)
 
 * **Дописать в ./nginx/nginx.conf проксирование странички /status, по которой надо отдавать статус сервера nginx. Перезапустить докер образ**
 
-    ![](/src/Images/4.2.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/4.2.2.png)
 
 * **Если всё сделано верно, то, после сохранения файла и перезапуска контейнера, конфигурационный файл внутри докер образа должен обновиться самостоятельно без лишних действий**
 
 * **Проверить, что теперь по localhost:80/status отдается страничка со статусом nginx**
 
-    ![](/src/Images/4.5.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/4.5.png)
 
 ## Part 5. Dockle
 
@@ -168,11 +168,11 @@
 
 * **Просканировать образ из предыдущего задания через dockle [image_id|repository]**
 
-    ![](/src/Images/5.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/5.1.png)
 
 * **Исправить образ так, чтобы при проверке через dockle не было ошибок и предупреждений**
 
-    ![](/src/Images/5.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/5.2.png)
 
 ## Part 6. Базовый Docker Compose
 
@@ -189,11 +189,11 @@
 
 * **Собрать и запустить проект с помощью команд docker-compose build и docker-compose up**
 
-    ![](/src/Images/6.1.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/6.1.png)
 
 * **Проверить, что в браузере по localhost:80 отдается написанная вами страничка, как и ранее**
 
-    ![](/src/Images/6.2.png)
+    ![](https://github.com/RepinOleg/DevOps/blob/develop/Docker/src/Images/6.2.png)
 
 
 
