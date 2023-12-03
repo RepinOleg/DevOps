@@ -2,12 +2,6 @@
 
 Development of a simple **CI/CD** for the *SimpleBashUtils* project. Building, testing, deployment.
 
-## Chapter II
-
-`-` Your first task requires some explanation. Let me give you a quick introduction.
-
-*You were only able to make out the most basic information from the speech that followed, as it felt accelerated by five.*
-
 ### Part 1. Setting up the **gitlab-runner**
 
 `-` Since you have decided to do CI/CD, you must really, really like testing. I love it too. So let's get started.
