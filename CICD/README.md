@@ -2,29 +2,13 @@
 
 Development of a simple **CI/CD** for the *SimpleBashUtils* project. Building, testing, deployment.
 
-The russian version of the task can be found in the repository.
 
 
 ## Contents
 
-1. [Chapter I](#chapter-i)
-2. [Chapter II](#chapter-ii) \
-    2.1. [CI/CD basics](#ci-cd-basics)  
-    2.2. [CI basics](#ci-basics)  
-    2.3. [CD basics](#cd-basics)
-3. [Chapter III](#chapter-iii) \
-    3.1. [Setting up the gitlab-runner](#part-1-setting-up-the-gitlab-runner)  
-    3.2. [Building](#part-2-building)  
-    3.3. [Codestyle test](#part-3-codestyle-test)   
-    3.4. [Integration tests](#part-4-integration-tests)  
-    3.5. [Deployment stage](#part-5-deployment-stage)  
-    3.6. [Bonus. Notifications](#part-6-bonus-notifications)  
-4. [Chapter IV](#chapter-iv)
-
 
 ## Chapter I
 
-![basic_ci_cd](misc/images/basic_ci_cd.JPG)
 
 Planet Earth, United Kingdom of Great Britain and Northern Ireland, London, Oxford Street, ASI office, nowadays.
 
@@ -231,6 +215,3 @@ Just before you get your phone out, another person walks into the break room.
 The stranger quickly disappeared and a short man in an expensive suit, with a slight baldness, in his early fifties or sixties, entered the room. Without waiting for you to speak, he said with a subtle, barely noticeable smile:
 
 `-` Oh, you must be Thomas. Truly magnificent performance of the test work. I hope you weren't intimidated by our lovely friend ASI Junior, she spoke highly of you. So, let me tell you more about what we do here in general and what is your role in our company...
-
-
-💡 [Tap here](https://forms.yandex.ru/cloud/641819b3c09c022518e7a4f3/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
