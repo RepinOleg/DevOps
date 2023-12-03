@@ -2,80 +2,6 @@
 
 Real-time monitoring and research of the system status.
 
-The russian version of the task can be found in the repository.
-
-
-## Contents
-
-1. [Chapter I](#chapter-i) 
-2. [Chapter II](#chapter-ii) \
-    2.1. [GoAccess](#goaccess) \
-    2.2. [Prometheus](#prometheus) \
-    2.3. [Grafana](#grafana)
-3. [Chapter III](#chapter-iii) \
-    3.1. [File generator](#part-1-file-generator)  
-    3.2. [File system clogging](#part-2-file-system-clogging)  
-    3.3. [Cleaning the file system](#part-3-cleaning-the-file-system)  
-    3.4. [Log generator](#part-4-log-generator)  
-    3.5. [Monitoring](#part-5-monitoring)  
-    3.6. [GoAccess](#part-6-goaccess)  
-    3.7. [Prometheus and Grafana](#part-7-prometheus-and-grafana)  
-    3.8. [A ready-made dashboard](#part-8-a-ready-made-dashboard)  
-    3.9. [Bonus. Your own node_exporter](#part-9-bonus-your-own-node_exporter)  
-
-
-## Chapter I
-
-![linux_monitoringv2.0](misc/images/linux_monitoringv2.0.png)
-
-Planet Earth, USA, California, nowadays.
-
-The working day has just started and you’ve already been called to your superiors. They tell you that your buddy Seb hasn't shown up for work in four days. There is a risk that his task will not be finished on time.
-So, now it's your responsibility to figure out the monitoring in Linux, so that you can take over for your careless teammate if necessary.
-
-You enter Seb's office, sit down in front of his computer and immediately open a suspiciously short file with his notes.
-While you look over the information that Seb has gathered, you can't stop thinking about the delicious lunch you've left in the break room...
-
-
-## Chapter II
-
-### **GoAccess**
-
-GoAccess is a log analyser that can handle logs in real time, visualise the information and pass it on via either a terminal or a web browser as a web page.
-
-### **Prometheus**
-
-Time series databases, just as their name implies, are database systems, specifically developed to handle time-related data.
-
-Most systems use relational, table-based databases. Time series databases work differently.
-Data is still stored in 'collections', but these collections have one common thing: they aggregate over time.
-Basically, this means that for each point that can be saved, there is a timestamp related to it.
-
-Prometheus is a time series database to which an entire ecosystem of tools can be attached to extend its functionality. \
-Prometheus is created to monitor a wide variety of systems: servers, databases, virtual machines, basically almost anything.
-
-### **Grafana**
-
-Grafana is a platform for data visualisation, monitoring and analysis.
-Grafana allows users to create *dashboards* with *panels*, each displaying specific indicators over a set period of time.
-
-Each *dashboard* is universal, so it can be customised for a certain project.
-
-*Panel* is the basic visualisation element of the selected indicators.
-
-*Dashboard* is a set of one or more panels placed in a grid with a set of variables (e.g. server name, application name, etc.).
-
-
-## Chapter III
-
-- The written bash scripts must be in the src folder
-- For each task you must create a folder with the following name: **0x**, where x is the task number.
-- All scripts must be decomposed and split into several files
-- The main script file for each task must be named **main.sh**
-- All scripts should have checks for incorrect input (not all parameters specified, wrong format parameters, etc.)
-- All scripts must be run on a virtual machine *Ubuntu Server 20.04 LTS*
-
-
 ## Part 1. File generator
 
 After a brief look at the information found on Seb's computer, you walk into the break room and find out that Mike has taken your delicious sandwich, which you specially brought from home.
@@ -182,8 +108,6 @@ Specify in the comments of your script/program what each of the response codes u
 Now that you have the files to analyse, you can move on to monitoring.
 
 **== Task ==**
-
-Write a bash script to parse **nginx** logs from [Part 4](#part-4-log-generator) via **awk**.
 The script is run with 1 parameter, which has a value of 1, 2, 3 or 4.
 
 Depending on the value of the parameter, output the following:
@@ -238,20 +162,3 @@ Why not get a ready-made dashboard that has all the metrics you need?
 ##### Run a network load test using **iperf3**
 
 ##### Check the network interface load
-
-
-## Part 9. Bonus. Your own *node_exporter*
-
-It is always useful and convenient to analyse the system with special utilities, but you have always wanted to understand how they work.
-
-**== Task ==**
-
-Write a bash script or a C program that collects information on basic system metrics (CPU, RAM, hard disk (capacity)). The script or a program should make a html page in **Prometheus** format, which will be served by **nginx**. \
-The page itself can be refreshed within a bash script or a program (in a loop), or using the cron utility, but not more often than every 3 seconds.
-
-##### Change the **Prometheus** configuration file so it collects information from the page you created.
-
-##### Run the same tests as in [Part 7](#part-7-prometheus-and-grafana)
-
-
-💡 [Tap here](https://forms.yandex.ru/cloud/641818e069387223cba1286e/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
