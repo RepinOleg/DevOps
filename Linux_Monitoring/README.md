@@ -143,5 +143,3 @@ TOP 10 executable files of the maximum size arranged in descending order (path, 
 etc up to 10  
 Script execution time (in seconds) = 1.5
 ```
-
-💡 [Tap here](https://forms.yandex.ru/cloud/6418187c73cee70bbf478995/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
